@@ -1,0 +1,165 @@
+@import url(//db.onlinewebfonts.com/c/6a9c6944fe8451dd397fe9d0763a4c88?family=OCR+A+Std);
+@font-face {
+  font-family: "OCR A Std";
+  src: 
+    url("//db.onlinewebfonts.com/t/6a9c6944fe8451dd397fe9d0763a4c88.eot");
+  src: 
+    url("//db.onlinewebfonts.com/t/6a9c6944fe8451dd397fe9d0763a4c88.eot?#iefix")
+    format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/6a9c6944fe8451dd397fe9d0763a4c88.woff2")
+    format("woff2"),
+    url("//db.onlinewebfonts.com/t/6a9c6944fe8451dd397fe9d0763a4c88.woff")
+    format("woff"),
+    url("//db.onlinewebfonts.com/t/6a9c6944fe8451dd397fe9d0763a4c88.ttf")
+    format("truetype"),
+    url("//db.onlinewebfonts.com/t/6a9c6944fe8451dd397fe9d0763a4c88.svg#OCR A Std")
+    format("svg"); 
+}
+
+.default-text {
+  text-align: center;
+  font-family: "OCR A Std", monospace;
+  font-size: 1.5rem;
+  color: black;
+  background-color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.default-text-x {
+  text-align: center;
+  font-family: "OCR A Std", monospace;
+  font-size: 1.5rem;
+  color: rgb(255, 198, 227);;
+  background-color: white;
+  padding-top: 1rem;
+  margin-top: 2rem;
+}
+
+.default-text-o {
+  text-align: center;
+  font-family: "OCR A Std", monospace;
+  font-size: 1.5rem;
+  color: rgb(83, 216, 90);
+  background-color: white;
+  padding-top: 1rem;
+  margin-top: 2rem;
+}
+
+.start-button {
+  text-align: center;
+  font-family: "OCR A Std", monospace;
+  font-size: 1.5rem;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 8px;
+}
+
+.start-button:hover {
+  text-align: center;
+  font-family: "OCR A Std", monospace;
+  font-size: 1.5rem;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 8px;
+}
+
+.start-button:disabled {
+  display: none;
+
+}
+
+.square-x {
+  text-align: center;
+  padding-top: 0.5rem;
+  font-family: "OCR A Std", monospace;
+  font-size: 1.5rem;
+  color: rgb(255, 198, 227);
+  background-color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  vertical-align: top;
+}
+
+.square-x:hover {
+  background-color: rgb(255, 198, 227, 0.1);
+}
+
+.square-x:disabled {
+  pointer-events: none;
+}
+
+.square-o {
+  text-align: center;
+  padding-top: 0.5rem;
+  font-family: "OCR A Std", monospace;
+  font-size: 1.5rem;
+  color: rgb(83, 216, 90);
+  background-color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  vertical-align: top;
+}
+
+.square-o:hover {
+  background-color: rgb(83, 216, 90, 0.1);
+}
+
+.square-o:disabled {
+  pointer-events: none;
+}
+
+.big-x {
+  justify-self: center;
+  font-family: "OCR A Std", monospace;
+  font-size: 7.5rem;
+  color: rgb(255, 198, 227);
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0.7;
+  position: absolute;
+  width: 8rem;
+  height: 7.5rem;
+  top: 0.4rem;
+}
+
+.x-highlight {
+  background-color: rgba(255, 198, 227, 0.8);
+}
+
+.big-o {
+  align-items: center;
+  justify-content: center;
+  font-family: "OCR A Std", monospace;
+  font-size: 7.5rem;
+  color: rgb(83, 216, 90);
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0.6;
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  top: 0.4rem;
+}
+
+.o-highlight {
+  background-color: rgba(83, 216, 90, 0.5);
+}
+
+.global-board-horizontal-line {
+  width: 24.5rem;
+  height: 0.2rem;
+  background-color: black;
+  justify-self: end;
+}
+
+.global-board-vertical-line {
+  width: 0.2rem;
+  height: 8.1rem;
+  background-color:black;
+  display: flex;
+}
