@@ -4,6 +4,7 @@
   "engines": {
     "node": "14.3.0"
   },
+  "type": "module",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -41,10 +42,12 @@
   },
   "babel": {
     "presets": [
-      "@babel/preset-env"
+      "@babel/preset-env",
+      "react",
+      "es2015"
     ],
     "plugins": [
-      "transform-class-properties"
+      "babel-plugin-styled-components"
     ]
   }
 }
