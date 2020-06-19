@@ -2,21 +2,9 @@ import * as React from "react";
 
 import { Square } from './Square';
 
-export class LocalBoard extends React.Component<
-  {
-    numBoard: number,
-    onClick(numSquare: number, boardCompleted?: number): void,
-    xIsNext: boolean,
-    enabled: boolean,
-  }, 
-  {
-    squares: string[],
-    complete: boolean,
-    winner: string
-  }
->
+export class LocalBoard extends React.Component
 {
-  constructor(props: any) {
+  constructor(props) {
     super(props);
     this.state = {
       squares: new Array(9).fill(''),
@@ -29,7 +17,7 @@ export class LocalBoard extends React.Component<
     this.isDisabled = this.isDisabled.bind(this);
   }
 
-  handleClick(numSquare: number) {
+  handleClick(numSquare) {
     const squares = this.state.squares;
     const value = this.props.xIsNext ? 'X' : 'O';
     squares.splice(numSquare, 1, value);
@@ -43,7 +31,7 @@ export class LocalBoard extends React.Component<
     }
   }
 
-  chooseSquareClassName(numSquare: number) {
+  chooseSquareClassName(numSquare) {
     if (this.state.squares[numSquare]==='') {
       return this.props.xIsNext ? 'square-x' : 'square-o';
     } else {
@@ -58,7 +46,7 @@ export class LocalBoard extends React.Component<
     return '';
   }
 
-  isDisabled(numSquare: number) {
+  isDisabled(numSquare) {
     if (this.state.complete || this.state.squares[numSquare] !=='') {
       return true;
     } else {

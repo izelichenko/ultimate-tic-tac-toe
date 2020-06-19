@@ -2,19 +2,8 @@ import * as React from "react";
 
 import { LocalBoard } from './LocalBoard';
 
-export class GlobalBoard extends React.Component<
-  {}, 
-  {
-    activeBoards: boolean[],
-    completedBoards: boolean[],
-    boardWinners: string[],
-    xIsNext: boolean,
-    winner: string,
-    buttonDisabled: boolean
-  }
->
-{
-  constructor(props: any) {
+export class GlobalBoard extends React.Component {
+  constructor(props) {
     super(props);
     this.state = {
       activeBoards: new Array(9).fill(false),
@@ -35,7 +24,7 @@ export class GlobalBoard extends React.Component<
     this.setState({activeBoards, buttonDisabled: true});
   }
 
-  handleClick(numSquare: number, boardCompleted?: number) {
+  handleClick(numSquare, boardCompleted='') {
     if (boardCompleted || boardCompleted===0) {
       const completedBoards = this.state.completedBoards;
       completedBoards.splice(boardCompleted, 1, true);

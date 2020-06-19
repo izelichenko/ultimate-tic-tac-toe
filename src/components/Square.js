@@ -1,17 +1,8 @@
 import * as React from "react";
 
-export class Square extends React.Component<
-  {
-    value: string,
-    style: Object,
-    className: string,
-    onClick(): void,
-    disabled: boolean,
-  }, 
-  {}
->
+export class Square extends React.Component
 {
-  constructor(props: any) {
+  constructor(props) {
     super(props);
   }
 
