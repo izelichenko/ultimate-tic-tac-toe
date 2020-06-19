@@ -116,7 +116,7 @@
 }
 
 .big-x {
-  justify-self: center;
+  text-align: center;
   font-family: "OCR A Std", monospace;
   font-size: 7.5rem;
   color: rgb(255, 198, 227);
@@ -133,8 +133,7 @@
 }
 
 .big-o {
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   font-family: "OCR A Std", monospace;
   font-size: 7.5rem;
   color: rgb(83, 216, 90);
@@ -142,7 +141,7 @@
   opacity: 0.6;
   position: absolute;
   width: 8rem;
-  height: 8rem;
+  height: 7.5rem;
   top: 0.4rem;
 }
 
