@@ -15,7 +15,7 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node --experimental-modules src/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
