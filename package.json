@@ -42,8 +42,10 @@
   },
   "babel": {
     "presets": [
-      "es2015"
+      "@babel/preset-env",
     ],
-    "plugins": ["transform-class-properties"]
+    "plugins": [
+      "transform-class-properties"
+    ]
   }
 }
