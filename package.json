@@ -39,5 +39,11 @@
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5",
     "webpack-cli": "^3.3.11"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": ["transform-class-properties"]
   }
 }
