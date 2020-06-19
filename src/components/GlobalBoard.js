@@ -44,7 +44,7 @@ export class GlobalBoard extends React.Component<
       boardWinners.splice(boardCompleted, 1, thisWinner);
       this.setState({completedBoards, boardWinners});
       const winner = this.calculateWinner();
-      if (winner!='') {
+      if (winner!=='') {
         this.setState({winner});
         const activeBoards = this.state.activeBoards;
         activeBoards.fill(false);
@@ -80,7 +80,7 @@ export class GlobalBoard extends React.Component<
     ];
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
-      if (this.state.boardWinners[a] != '' &&
+      if (this.state.boardWinners[a] !== '' &&
           this.state.boardWinners[a] === 
           this.state.boardWinners[b] && 
           this.state.boardWinners[a] === 

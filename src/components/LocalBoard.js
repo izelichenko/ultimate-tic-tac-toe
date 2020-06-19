@@ -35,7 +35,7 @@ export class LocalBoard extends React.Component<
     squares.splice(numSquare, 1, value);
     this.setState({squares: squares});
     const winner = this.calculateWinner();
-    if (winner !='') {
+    if (winner !=='') {
       this.setState({complete: true, winner: value});
       this.props.onClick(numSquare, this.props.numBoard);
     } else {
@@ -59,7 +59,7 @@ export class LocalBoard extends React.Component<
   }
 
   isDisabled(numSquare: number) {
-    if (this.state.complete || this.state.squares[numSquare] !='') {
+    if (this.state.complete || this.state.squares[numSquare] !=='') {
       return true;
     } else {
       return !this.props.enabled;
@@ -79,7 +79,7 @@ export class LocalBoard extends React.Component<
     ];
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
-      if (this.state.squares[a] != '' &&
+      if (this.state.squares[a] !== '' &&
           this.state.squares[a] === 
           this.state.squares[b] && 
           this.state.squares[a] === 
@@ -91,7 +91,7 @@ export class LocalBoard extends React.Component<
   }
 
   chooseWinnerClass() {
-    if (this.state.winner!='') {
+    if (this.state.winner!=='') {
       return this.state.winner === 'X' ? 'big-x' : 'big-o';
     }
     return '';
