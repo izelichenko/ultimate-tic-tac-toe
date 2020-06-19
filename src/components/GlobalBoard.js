@@ -36,7 +36,7 @@ export class GlobalBoard extends React.Component<
   }
 
   handleClick(numSquare: number, boardCompleted?: number) {
-    if (boardCompleted) {
+    if (boardCompleted || boardCompleted===0) {
       const completedBoards = this.state.completedBoards;
       completedBoards.splice(boardCompleted, 1, true);
       const boardWinners = this.state.boardWinners;
