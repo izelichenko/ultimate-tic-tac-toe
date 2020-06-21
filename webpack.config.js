@@ -1,6 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackRootPlugin = require('html-webpack-root-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -10,12 +10,17 @@ module.exports = {
   devServer: {
     contentBase: './dist',
   },
+  resolve: {
+    "alias": {
+      "react": "preact-compat",
+      "react-dom": "preact-compat"
+    }
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './template.html'
-    }),
-    //new HtmlWebpackRootPlugin(),
+    })
   ],
   output: {
     filename: 'bundle.js',
