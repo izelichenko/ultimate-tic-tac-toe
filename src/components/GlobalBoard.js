@@ -24,13 +24,12 @@ export class GlobalBoard extends React.Component {
     this.setState({activeBoards, buttonDisabled: true});
   }
 
-  handleClick(numSquare, boardCompleted='') {
+  handleClick(numSquare, boardCompleted='', boardWinner='') {
     if (boardCompleted || boardCompleted===0) {
       const completedBoards = this.state.completedBoards;
       completedBoards.splice(boardCompleted, 1, true);
       const boardWinners = this.state.boardWinners;
-      const thisWinner = this.state.xIsNext ? 'X' : 'O';
-      boardWinners.splice(boardCompleted, 1, thisWinner);
+      boardWinners.splice(boardCompleted, 1, boardWinner);
       this.setState({completedBoards, boardWinners});
       const winner = this.calculateWinner();
       if (winner!=='') {
@@ -104,10 +103,10 @@ export class GlobalBoard extends React.Component {
           <p className='default-text' style={{display: this.state.buttonDisabled && this.state.winner==='' ? 'inline' : 'none'}}>
             Is Next
           </p>
-          <p className={this.state.winner==='X' ? 'default-text-x' : 'default-text-o'} style={{display: this.state.winner==='' ? 'none' : 'inline'}}>
+          <p className={this.state.winner==='X' ? 'default-text-x' : 'default-text-o'} style={{display: this.state.winner==='' || this.state.winner==='D' ? 'none' : 'inline'}}>
             {this.state.winner}
           </p>
-          <p className='default-text' style={{display: this.state.winner==='' ? 'none' : 'inline'}}>
+          <p className='default-text' style={{display: this.state.winner==='' || this.state.winner==='D' ? 'none' : 'inline'}}>
             is the winner!
           </p>
           <p className='default-text' style={{display: this.state.winner==='D' ? 'inline' : 'none'}}>
