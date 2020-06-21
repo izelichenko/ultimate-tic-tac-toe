@@ -34,9 +34,16 @@ export class GlobalBoard extends React.Component {
       this.setState({completedBoards, boardWinners});
       const winner = this.calculateWinner();
       if (winner!=='') {
-        this.setState({winner});
         const activeBoards = this.state.activeBoards;
         activeBoards.fill(false);
+        this.setState({winner, activeBoards});
+        return;
+      }
+      if (!this.state.completedBoards.includes(false)){
+        const winner = 'D';
+        const activeBoards = this.state.activeBoards;
+        activeBoards.fill(false);
+        this.setState({winner, activeBoards});
         return;
       }
     }
@@ -102,6 +109,9 @@ export class GlobalBoard extends React.Component {
           </p>
           <p className='default-text' style={{display: this.state.winner==='' ? 'none' : 'inline'}}>
             is the winner!
+          </p>
+          <p className='default-text' style={{display: this.state.winner==='D' ? 'inline' : 'none'}}>
+            It's a draw!
           </p>
         </div>
         <div style={{display: 'flex',  justifyContent: 'center'}}>

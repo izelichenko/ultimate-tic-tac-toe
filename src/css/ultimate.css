@@ -56,10 +56,10 @@
   padding: 1rem;
   margin-left: 2rem;
   margin-right: 4rem;
-  margin-top: 5rem;
+  margin-top: 4rem;
   border-radius: 8px;
   width: 22.5rem;
-  height: 27rem;
+  height: 27.3rem;
 }
 
 .rules-item {
@@ -174,6 +174,21 @@
   height: 7.5rem;
   top: 0.4rem;
 }
+
+.big-d {
+  text-align: center;
+  font-family: "OCR A Std", monospace;
+  font-size: 7.5rem;
+  color: rgb(139, 139, 139);
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0.6;
+  position: absolute;
+  width: 8rem;
+  height: 7.5rem;
+  top: 0.4rem;
+}
+
+
 
 .o-highlight {
   background-color: rgba(83, 216, 90, 0.5);

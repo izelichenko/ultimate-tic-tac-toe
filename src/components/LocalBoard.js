@@ -24,9 +24,13 @@ export class LocalBoard extends React.Component
     this.setState({squares: squares});
     const winner = this.calculateWinner();
     if (winner !=='') {
-      this.setState({complete: true, winner: value});
+      this.setState({complete: true, winner});
       this.props.onClick(numSquare, this.props.numBoard);
     } else {
+      if (!this.state.squares.includes('')) {
+        const winner = 'D';
+        this.setState({complete: true, winner});
+      }
       this.props.onClick(numSquare);
     }
   }
@@ -80,6 +84,9 @@ export class LocalBoard extends React.Component
 
   chooseWinnerClass() {
     if (this.state.winner!=='') {
+      if (this.state.winner==='D'){
+        return 'big-d';
+      }
       return this.state.winner === 'X' ? 'big-x' : 'big-o';
     }
     return '';
