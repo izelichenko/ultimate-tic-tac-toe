@@ -16,3 +16,9 @@ app.use(webpackDevMiddleware(compiler, {
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!\n');
 });
+
+app.get('*.js', function (req, res, next) {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  next();
+});
